@@ -11,11 +11,12 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* Add the motion blur effect to your CSS */
 .container {
     display: flex;
     height: 100vh;
     width: 400vw; /* 100vw per page */
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .page {
@@ -23,12 +24,52 @@ body, html {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.35s ease-in-out, filter 0.35s ease-in-out;
+}
+
+/* Stretch to the left (next page), starting from the right */
+.page.stretch-left {
+    transform-origin: right; /* Stretch from the right */
+    transform: scaleX(1.5) translateX(-15%);
+    filter: blur(100px);
+}
+
+/* Stretch to the right (previous page), starting from the left */
+.page.stretch-right {
+    transform-origin: left; /* Stretch from the left */
+    transform: scaleX(1.5) translateX(15%);
+    filter: blur(100px);
+}
+
+/* Reset transition */
+.page.reset {
+    transform: none;
+    filter: none;
+}
+
+
+/* Motion blur on page change */
+.page.moving-left,
+.page.moving-right {
+    transform: scaleX(1.5); /* Slight stretch */
+}
+
+.page.moving-left {
+    filter: blur(100px); /* Leftward motion blur */
+}
+
+.page.moving-right {
+    filter: blur(100px); /* Rightward motion blur */
 }
 
 /* Add the transparent box */
@@ -59,6 +100,7 @@ body, html {
 }
 
 /* Tesla vehicle image */
+/* Tesla vehicle image */
 #tesla {
     position: absolute;
     bottom: 60px; /* Adjust as needed to move the car up from the bottom */
@@ -66,7 +108,42 @@ body, html {
     transform: translateX(-50%);
     width: 300px; /* Adjust width as needed */
     z-index: 10; /* Ensure it's on top of other content */
+    transition: all 1s ease;
 }
+
+/* Zoom out animation (moves right and disappears) */
+@keyframes zoomOutRight {
+    0% {
+        left: 50%;
+        transform: translateX(-50%) scale(1); /* Start in the center */
+    }
+    100% {
+        left: 100%;
+        transform: translateX(50%) scale(0); /* Move offscreen to the right and scale down */
+    }
+}
+
+/* Zoom in animation (moves in from the left and scales up) */
+@keyframes zoomInLeft {
+    0% {
+        left: 0%;
+        transform: translateX(-50%) scale(0); /* Start offscreen from the left, scaled down */
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%) scale(1); /* Center and scale back to normal */
+    }
+}
+
+/* Apply animation classes */
+.zoom-out {
+    animation: zoomOutRight 1s forwards; /* Move offscreen to the right */
+}
+
+.zoom-in {
+    animation: zoomInLeft 1s forwards; /* Move in from the left */
+}
+
 
 /* Navigation buttons */
 .navigation {
