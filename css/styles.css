@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 400vw; /* 100vw per page */
+    transition: transform 0.5s ease;
+}
+
+.page {
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Add the transparent box */
+.page-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+    padding: 20px;
+    border-radius: 10px; /* Optional, to round the corners of the box */
+    color: white; /* Ensure text is readable on the black background */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Set each page to have a different background image */
+#page1 {
+    background-image: url('../img/1.JPG');
+}
+
+#page2 {
+    background-image: url('../img/2.JPG');
+}
+
+#page3 {
+    background-image: url('../img/3.JPG');
+}
+
+#page4 {
+    background-image: url('../img/4.JPG');
+}
+
+/* Tesla vehicle image */
+#tesla {
+    position: absolute;
+    bottom: 60px; /* Adjust as needed to move the car up from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* Adjust width as needed */
+    z-index: 10; /* Ensure it's on top of other content */
+}
+
+/* Navigation buttons */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
