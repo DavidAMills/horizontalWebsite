@@ -33,7 +33,7 @@ function resetZoomClasses() {
 function nextPage() {
     if (currentPage < 3) {
         addStretchEffect('left'); // Trigger stretch to the left
-        teslaCar.classList.add('slide-out'); // Start slide-out animation
+        teslaCar.classList.add('slide-out-right'); // Slide out to the right
 
         // Move to the next page after the stretch and slide-out
         setTimeout(() => {
@@ -42,21 +42,23 @@ function nextPage() {
             removeStretchEffect(); // Remove the stretch effect
         }, 350);
 
-        // Trigger the slide-in animation after the page transition
+        // Slide in from the left
         setTimeout(() => {
-            teslaCar.classList.remove('slide-out');
-            teslaCar.classList.add('slide-in'); // Start slide-in animation
+            teslaCar.classList.remove('slide-out-right');
+            teslaCar.classList.add('slide-in-left'); // Start slide-in animation from the left
         }, 700);
 
         // Reset classes after animations complete
-        setTimeout(resetZoomClasses, 1500);
+        setTimeout(() => {
+            teslaCar.classList.remove('slide-in-left'); // Ensure we remove the slide-in class so the button works again
+        }, 1500);
     }
 }
 
 function prevPage() {
     if (currentPage > 0) {
         addStretchEffect('right'); // Trigger stretch to the right
-        teslaCar.classList.add('slide-out'); // Start slide-out animation
+        teslaCar.classList.add('slide-out-left'); // Slide out to the left
 
         // Move to the previous page after the stretch and slide-out
         setTimeout(() => {
@@ -65,17 +67,18 @@ function prevPage() {
             removeStretchEffect(); // Remove the stretch effect
         }, 350);
 
-        // Trigger the slide-in animation after the page transition
+        // Slide in from the right
         setTimeout(() => {
-            teslaCar.classList.remove('slide-out');
-            teslaCar.classList.add('slide-in'); // Start slide-in animation
+            teslaCar.classList.remove('slide-out-left');
+            teslaCar.classList.add('slide-in-right'); // Start slide-in animation from the right
         }, 700);
 
         // Reset classes after animations complete
-        setTimeout(resetZoomClasses, 1500);
+        setTimeout(() => {
+            teslaCar.classList.remove('slide-in-right'); // Ensure we remove the slide-in class so the button works again
+        }, 1500);
     }
 }
-
 
 // Function to update the page position
 function updatePage() {
