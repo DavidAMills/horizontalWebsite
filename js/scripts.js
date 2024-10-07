@@ -27,56 +27,55 @@ function removeStretchEffect() {
 
 // Function to reset the zoom classes after animation completes
 function resetZoomClasses() {
-    teslaCar.classList.remove('zoom-out', 'zoom-in');
+    teslaCar.classList.remove('slide-out', 'slide-in');
 }
 
-// Navigate to the next page
 function nextPage() {
     if (currentPage < 3) {
         addStretchEffect('left'); // Trigger stretch to the left
-        teslaCar.classList.add('zoom-out'); // Start zoom out animation
+        teslaCar.classList.add('slide-out'); // Start slide-out animation
 
-        // Move to the next page after the stretch and zoom-out
+        // Move to the next page after the stretch and slide-out
         setTimeout(() => {
             currentPage++;
             updatePage(); // Move to the next page
             removeStretchEffect(); // Remove the stretch effect
-        }, 350); // Delay before transitioning (adjust as needed)
+        }, 350);
 
-        // Trigger the zoom-in animation after the page transition
+        // Trigger the slide-in animation after the page transition
         setTimeout(() => {
-            teslaCar.classList.remove('zoom-out'); // Remove zoom-out class
-            teslaCar.classList.add('zoom-in'); // Start zoom-in animation
-        }, 700); // Adjust delay for when zoom-in should start
+            teslaCar.classList.remove('slide-out');
+            teslaCar.classList.add('slide-in'); // Start slide-in animation
+        }, 700);
 
-        // Reset zoom classes after zoom-in completes
-        setTimeout(resetZoomClasses, 1500); // 1500ms is the total duration of zoom-out and zoom-in animations
+        // Reset classes after animations complete
+        setTimeout(resetZoomClasses, 1500);
     }
 }
 
-// Navigate to the previous page
 function prevPage() {
     if (currentPage > 0) {
         addStretchEffect('right'); // Trigger stretch to the right
-        teslaCar.classList.add('zoom-out'); // Start zoom out animation
+        teslaCar.classList.add('slide-out'); // Start slide-out animation
 
-        // Move to the previous page after the stretch and zoom-out
+        // Move to the previous page after the stretch and slide-out
         setTimeout(() => {
             currentPage--;
             updatePage(); // Move to the previous page
             removeStretchEffect(); // Remove the stretch effect
-        }, 350); // Delay before transitioning (adjust as needed)
+        }, 350);
 
-        // Trigger the zoom-in animation after the page transition
+        // Trigger the slide-in animation after the page transition
         setTimeout(() => {
-            teslaCar.classList.remove('zoom-out'); // Remove zoom-out class
-            teslaCar.classList.add('zoom-in'); // Start zoom-in animation
-        }, 700); // Adjust delay for when zoom-in should start
+            teslaCar.classList.remove('slide-out');
+            teslaCar.classList.add('slide-in'); // Start slide-in animation
+        }, 700);
 
-        // Reset zoom classes after zoom-in completes
-        setTimeout(resetZoomClasses, 1500); // 1500ms is the total duration of zoom-out and zoom-in animations
+        // Reset classes after animations complete
+        setTimeout(resetZoomClasses, 1500);
     }
 }
+
 
 // Function to update the page position
 function updatePage() {

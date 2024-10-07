@@ -111,39 +111,37 @@ body, html {
     transition: all 1s ease;
 }
 
-/* Zoom out animation (moves right and disappears) */
-@keyframes zoomOutRight {
+/* Sslide in slide out animations */
+@keyframes slideOutRight {
     0% {
         left: 50%;
-        transform: translateX(-50%) scale(1); /* Start in the center */
+        transform: translateX(-50%);
     }
     100% {
         left: 100%;
-        transform: translateX(50%) scale(0); /* Move offscreen to the right and scale down */
+        transform: translateX(50%);
     }
 }
 
-/* Zoom in animation (moves in from the left and scales up) */
-@keyframes zoomInLeft {
+@keyframes slideInLeft {
     0% {
         left: 0%;
-        transform: translateX(-50%) scale(0); /* Start offscreen from the left, scaled down */
+        transform: translateX(-50%);
     }
     100% {
         left: 50%;
-        transform: translateX(-50%) scale(1); /* Center and scale back to normal */
+        transform: translateX(-50%);
     }
 }
 
-/* Apply animation classes */
-.zoom-out {
-    animation: zoomOutRight 1s forwards; /* Move offscreen to the right */
+/* Apply the animation classes */
+.slide-out {
+    animation: slideOutRight 1s forwards; /* Slide out to the right */
 }
 
-.zoom-in {
-    animation: zoomInLeft 1s forwards; /* Move in from the left */
+.slide-in {
+    animation: slideInLeft 1s forwards; /* Slide in from the left */
 }
-
 
 /* Navigation buttons */
 .navigation {
@@ -153,6 +151,7 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 10px;
+    z-index: 10;
 }
 
 button {
@@ -166,4 +165,15 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.road-background {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 101px; /* Height of the road image */
+    background-image: url('../img/horizontalRoad.png');
+    background-repeat: repeat-x; /* Repeat horizontally */
+    background-position: bottom;
+    z-index: 5; /* Below Tesla and navigation but above content */
 }
