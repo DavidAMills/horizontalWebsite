@@ -86,3 +86,26 @@ function updatePage() {
 // Event Listeners
 nextBtn.addEventListener('click', nextPage);
 prevBtn.addEventListener('click', prevPage);
+
+
+// Get the elements
+const pedestrianCrashData = document.getElementById('pedestrian-crash-data');
+const popup = document.getElementById('pedestrian-popup');
+const closePopup = document.querySelector('.close');
+
+// When the pedestrian crash data section is clicked, show the popup
+pedestrianCrashData.addEventListener('click', function() {
+    popup.style.display = 'flex'; // Show popup with flex for centering
+});
+
+// When the user clicks on the close button, hide the popup
+closePopup.addEventListener('click', function() {
+    popup.style.display = 'none'; // Hide popup
+});
+
+// Optionally, close popup if clicked outside of the content area
+window.addEventListener('click', function(event) {
+    if (event.target == popup) {
+        popup.style.display = 'none'; // Hide popup when clicked outside
+    }
+});
