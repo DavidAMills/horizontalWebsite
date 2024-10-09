@@ -5,32 +5,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizontal Scroll Website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <div class="container">
-        <section class="page" id="page1">
+      <!-- Home page with the six-segment background -->
+      <section class="page" id="home">
+          <div class="background-grid">
+              <!-- Segment 1 -->
+              <div class="segment" id="segment1">
+                  <div class="content-holder">
+                      <i class="fas fa-database"></i> <!-- Data Collection icon -->
+                      <p>Step 1</p>
+                      <div class="sub-content">
+                          <div class="sub-item">Collect pedestrian crash and safety data</div>
+                          <div class="sub-item">Review existing highway safety plans</div>
+                          <div class="sub-item">Initiate a pedestrian safety action plan</div>
+                          <div class="sub-item">Pedestrian safety policy analysis</div>
+                          <div class="sub-item">Request and receive public input</div>
+                          <div class="sub-item">Conduct a walkability audit</div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Segment 2 -->
+              <div class="segment" id="segment2">
+                  <div class="content-holder">
+                      <i class="fas fa-clipboard-list"></i> <!-- Inventory Conditions icon -->
+                      <p>Step 2</p>
+                      <div class="sub-content">
+                          <div class="sub-item">Inventory roadway characteristics and pedestrian crossings</div>
+                          <div class="sub-item">Conduct crash cluster analysis</div>
+                          <div class="sub-item">Conduct systemic analysis</div>
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Segment 3 -->
+              <div class="segment" id="segment3">
+                  <div class="content-holder">
+                      <i class="fas fa-exclamation-triangle"></i> <!-- Analyze Safety Issues icon -->
+                      <p>Step 3</p>
+                      <div class="sub-content">
+                          <div class="sub-item">Create crash diagrams</div>
+                          <div class="sub-item">Identify crash factors</div>
+                          <div class="sub-item">Conduct an RSA (Road Safety Audit)</div>
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Segment 4 -->
+              <div class="segment" id="segment4">
+                  <div class="content-holder">
+                      <i class="fas fa-tools"></i> <!-- Select Countermeasures icon -->
+                      <p>Step 4</p>
+                      <div class="sub-content">
+                          <div class="sub-item">Review Table 1 (roadway features)</div>
+                          <div class="sub-item">Review Table 2 (safety issues)</div>
+                          <div class="sub-item">Review Table 3 (implementation & operations considerations)</div>
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Segment 5 -->
+              <div class="segment" id="segment5">
+                  <div class="content-holder">
+                      <i class="fas fa-cogs"></i> <!-- Consult Design Resources icon -->
+                      <p>Step 5</p>
+                      <div class="sub-content">
+                          <div class="sub-item">MUTCD Guidance</div>
+                          <div class="sub-item">AASHTO & State Guidance</div>
+                          <div class="sub-item">Local and Other Guidance</div>
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Segment 6 -->
+              <div class="segment" id="segment6">
+                  <div class="content-holder">
+                      <i class="fas fa-chart-line"></i> <!-- Monitor Outcomes icon -->
+                      <p>Step 6</p>
+                      <div class="sub-content">
+                          <div class="sub-item">Identify implementation opportunities</div>
+                          <div class="sub-item">Consider funding options</div>
+                          <div class="sub-item">Construct improvements</div>
+                          <div class="sub-item">Monitor results of implementation</div>
+                          <div class="sub-item"></div> <!-- Blank item -->
+                          <div class="sub-item"></div> <!-- Blank item -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="page" id="step1">
           <div class="page-content">
-            <h1>Page 1</h1>
-            <p>This is the content of the first page.</p>
+              <h1>Step 1: Collect Data and Engage the Public</h1>
+              <p>This section describes methods for capturing and understanding existing pedestrian safety trends and engaging stakeholders.</p>
+              <div class="studio-sections">
+                  <div class="studio-section">
+                      <h3>Pedestrian Crash Data Collection</h3>
+                      <p>Collect and analyze data on pedestrian crashes to identify problem areas and improve safety measures.</p>
+                  </div>
+                  <div class="studio-section">
+                      <h3>Review Existing Highway Safety Plans</h3>
+                      <p>Analyze current highway safety plans to understand existing policies and their impact on pedestrian safety.</p>
+                  </div>
+                  <div class="studio-section">
+                      <h3>Initiate a Pedestrian Safety Action Plan</h3>
+                      <p>Develop and implement an action plan specifically focused on improving pedestrian safety.</p>
+                  </div>
+                  <div class="studio-section">
+                      <h3>Pedestrian Safety Policy Analysis</h3>
+                      <p>Assess current policies that affect pedestrian safety and identify areas for improvement.</p>
+                  </div>
+                  <div class="studio-section">
+                      <h3>Request and Receive Public Input</h3>
+                      <p>Engage with the public to gather insights, feedback, and suggestions on pedestrian safety initiatives.</p>
+                  </div>
+                  <div class="studio-section">
+                      <h3>Conduct a Walkability Audit</h3>
+                      <p>Evaluate pedestrian infrastructure to identify barriers and opportunities for enhancing walkability.</p>
+                  </div>
+              </div>
           </div>
         </section>
-        <section class="page" id="page2">
-          <div class="page-content">
-            <h1>Page 2</h1>
-            <p>This is the content of the second page.</p>
-          </div>
+
+        <section class="page" id="step2">
+            <div class="page-content">
+                <h1>Step 2: Inventory Conditions and Prioritize Locations</h1>
+                <p>This Studio section describes the options for how an agency can document field conditions (such as roadway characteristics) and screen the transportation network for high-crash and high-risk locations. An agency can perform any or all of these analyses.</p>
+                <div class="studio-sections">
+                    <div class="studio-section">
+                        <h3>Inventory Roadway Characteristics and Pedestrian Crossings</h3>
+                        <p>Document field conditions, such as roadway characteristics and pedestrian crossings, to identify high-risk areas.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Conduct a Crash Cluster Analysis</h3>
+                        <p>Analyze crash data to identify clusters of high-crash locations, helping to prioritize areas for safety improvements.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Conduct a Systemic Analysis</h3>
+                        <p>Screen the transportation network for high-risk locations by identifying common risk factors associated with crashes.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="page" id="page3">
-          <div class="page-content">
-            <h1>Page 3</h1>
-            <p>This is the content of the third page.</p>
-          </div>
+
+        <section class="page" id="step3">
+            <div class="page-content">
+                <h1>Step 3: Analyze Crash Types and Safety Issues</h1>
+                <p>This Studio section describes methods for summarizing pedestrian crash types and observed traffic safety issues. This information is important for selecting countermeasures.</p>
+                <div class="studio-sections">
+                    <div class="studio-section">
+                        <h3>Create Crash Diagrams</h3>
+                        <p>Visualize crash data through diagrams to better understand the types and patterns of pedestrian crashes.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Identify Crash Factors</h3>
+                        <p>Analyze contributing factors to pedestrian crashes, such as vehicle speed, road conditions, and pedestrian behavior.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Conduct a Pedestrian Road Safety Assessment (RSA)</h3>
+                        <p>Perform a Road Safety Assessment to systematically evaluate pedestrian safety issues and recommend countermeasures.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="page" id="page4">
-          <div class="page-content">
-            <h1>Page 4</h1>
-            <p>This is the content of the fourth page.</p>
-          </div>
+
+        <section class="page" id="step4">
+            <div class="page-content">
+                <h1>Step 4: Countermeasure Selection</h1>
+                <p><strong>Instructions:</strong> Resources for both selecting countermeasures and learning more about the countermeasures are below. Click through each item to access recommendations, case studies, and links to additional information.</p>
+
+                <h2>Tools for Selecting Countermeasures</h2>
+                <div class="tool-tables">
+                    <div class="table">
+                        <img src="img/table1.jpg" alt="Table 1 Roadway Features">
+                        <a href="#">Table 1<br>Roadway Features</a>
+                    </div>
+                    <div class="table">
+                        <img src="img/table2.jpg" alt="Table 2 Safety Features">
+                        <a href="#">Table 2<br>Safety Features</a>
+                    </div>
+                    <div class="table">
+                        <img src="img/table3.jpg" alt="Table 3 Implementation & Operations Considerations">
+                        <a href="#">NEW Table 3<br>Implementation & Operations Considerations</a>
+                    </div>
+                </div>
+
+                <h2>Countermeasure Information</h2>
+                <div class="countermeasures">
+                    <ul>
+                        <li>Marked Crosswalk</li>
+                        <li>Crosswalk Lighting</li>
+                        <li>In-street Pedestrian Signage</li>
+                        <li>Advance Yield and Stop Markings</li>
+                        <li>Curb Extensions & Parking Restriction</li>
+                        <li>Raised Crosswalk</li>
+                        <li>Pedestrian Refuge Island</li>
+                        <li>Rectangular Rapid Flashing Beacon (RRFB)</li>
+                        <li>Pedestrian Hybrid Beacon (PHB)</li>
+                        <li>Road Diet</li>
+                        <li>Leading Pedestrian Interval</li>
+                        <li>Additional Signalized Intersection</li>
+                        <li>Pedestrian Safety Improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="step5">
+            <div class="page-content">
+                <h1>Step 5: Consult Design and Installation</h1>
+                <p>This Studio section identifies additional resources that refine countermeasure options for priority sites.</p>
+
+                <h2>Studio Sections</h2>
+                <div class="studio-sections">
+                    <div class="studio-section">
+                        <h3>MUTCD Guidance</h3>
+                        <p>Consult the Manual on Uniform Traffic Control Devices (MUTCD) for guidance on design and installation of pedestrian safety countermeasures.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>AASHTO & State Guidance</h3>
+                        <p>Review guidance from the American Association of State Highway and Transportation Officials (AASHTO) as well as state-specific guidelines.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Local and Other Guidance</h3>
+                        <p>Check local and additional resources that provide tailored guidance for specific areas or concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="step6">
+            <div class="page-content">
+                <h1>Step 6: Identify Opportunities and Monitor</h1>
+                <p>This Studio section describes possible options for funding and implementation of the countermeasures described in the Studio and the Guide.</p>
+
+                <h2>Studio Sections</h2>
+                <div class="studio-sections">
+                    <div class="studio-section">
+                        <h3>Identify Implementation Opportunities</h3>
+                        <p>Explore potential opportunities for implementing the selected countermeasures.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Consider Funding Options</h3>
+                        <p>Evaluate available funding sources to support the implementation of the proposed safety improvements.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Construct Improvements</h3>
+                        <p>Move forward with the construction and implementation of the selected pedestrian safety improvements.</p>
+                    </div>
+                    <div class="studio-section">
+                        <h3>Monitor Results of Implementation</h3>
+                        <p>Track and monitor the results of implemented countermeasures to assess their effectiveness and guide future decisions.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 

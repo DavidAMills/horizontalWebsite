@@ -27,11 +27,12 @@ function removeStretchEffect() {
 
 // Function to reset the zoom classes after animation completes
 function resetZoomClasses() {
-    teslaCar.classList.remove('slide-out', 'slide-in');
+    teslaCar.classList.remove('slide-out-right', 'slide-in-left', 'slide-out-left', 'slide-in-right');
 }
 
+// Navigate to the next page
 function nextPage() {
-    if (currentPage < 3) {
+    if (currentPage < 6) {
         addStretchEffect('left'); // Trigger stretch to the left
         teslaCar.classList.add('slide-out-right'); // Slide out to the right
 
@@ -49,12 +50,11 @@ function nextPage() {
         }, 700);
 
         // Reset classes after animations complete
-        setTimeout(() => {
-            teslaCar.classList.remove('slide-in-left'); // Ensure we remove the slide-in class so the button works again
-        }, 1500);
+        setTimeout(resetZoomClasses, 1500);
     }
 }
 
+// Navigate to the previous page
 function prevPage() {
     if (currentPage > 0) {
         addStretchEffect('right'); // Trigger stretch to the right
@@ -74,9 +74,7 @@ function prevPage() {
         }, 700);
 
         // Reset classes after animations complete
-        setTimeout(() => {
-            teslaCar.classList.remove('slide-in-right'); // Ensure we remove the slide-in class so the button works again
-        }, 1500);
+        setTimeout(resetZoomClasses, 1500);
     }
 }
 
